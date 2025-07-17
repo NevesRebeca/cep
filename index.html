@@ -8,16 +8,17 @@
 </head>
 
 <body>
-  <form onsubmit="return consultaCep(event)">
+  <form onsubmit="return consultaCep(event)" id="formulario">
     <label for="cep"> CEP </label>
-    <input type="text" id="cep" />
+    <input type="text" id="cep" name="cep" />
     <input type="submit" value="Enviar" />
   </form>
 
   <script>
     function consultaCep(event) {
       event.preventDefault();
-      console.log("Enviado", { event });
+      const cep = document.getElementById("formulario").elements["cep"].value;
+      console.log("Enviado", { event, cep });
     }
   </script>
 
