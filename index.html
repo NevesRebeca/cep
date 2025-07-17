@@ -8,11 +8,19 @@
 </head>
 
 <body>
-  <form>
-    <label> CEP </label>
+  <form onsubmit="return consultaCep(event)">
+    <label for="cep"> CEP </label>
     <input type="text" id="cep" />
-    <button> Enviar </button>
+    <input type="submit" value="Enviar" />
   </form>
+
+  <script>
+    function consultaCep(event) {
+      event.preventDefault();
+      console.log("Enviado", { event });
+    }
+  </script>
+
 </body>
 
 </html>
