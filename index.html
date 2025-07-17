@@ -14,20 +14,37 @@
     <input type="submit" value="Enviar" />
   </form>
 
+  <div id="resultado">
+
+  </div>
+
   <script>
-    function consultaCep(event) {
+    async function consultaCep(event) {
       event.preventDefault();
       const cep = document.getElementById("formulario").elements["cep"].value;
-      console.log("Enviado", { event, cep });
-      mostraCep();
+      const endereco = await mostraCep(cep);
+      document.getElementById("resultado").innerText = formataEndereco(endereco);
     }
 
-    async function mostraCep() {
-      const url = "https://viacep.com.br/ws/01001000/json/";
+    async function mostraCep(cep) {
+      const url = "https://viacep.com.br/ws/" + cep + "/json/";
       const resposta = await fetch(url);
-      console.log(resposta);
       const body = await resposta.json();
+      console.log(body);
+      return body;
     }
+    function formataEndereco(endereco) {
+      return endereco.logradouro + ", " + endereco.bairro + ", " + endereco.localidade + " (" + endereco.uf + ")";
+
+
+
+
+
+      uf
+      :
+      "SP"
+    }
+
   </script>
 
 </body>
