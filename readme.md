@@ -11,7 +11,16 @@
   2. Integrar ao botão de envio
 
 - Resposta ao usuário
+
   1. A partir do CEP digitado pelo usuário, exibir/devolver o endereço completo
+
+- Refinamento
+  1. Estilo (cores neutras, centralização do conteúdo, personalizar botão)
+  2. Separar arquivos js, css e html
+  3. Tratamento de erros:
+     3.1. validar o dado inserido pelo usuário: número, 8 dígitos
+     3.2. validar erro na api: mensagem de erro
+     3.3. diferenciar as mensagens de erro
 
 ## GIT
 
