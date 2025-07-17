@@ -22,7 +22,9 @@
 - git remote add origin https://github.com/NevesRebeca/cep.git: adiciona o repositório remoto
   (comandos gerais usados durante o desenvolvimento de um projeto)
 - git push -u origin main: envia os últimos commits registrados no repositório remoto
+  - git push: o comando acima é usado apenas no primeiro commit. Para os demais, usar o indicado nesse tópico
 - git add nome_do_arquivo: adiciona um arquivo ao repositório criado
+  - git add . : adiciona todos os arquivos modificados
 - git commit -m "nome do commit": cria um novo commit (registro do histórico)
   (comandos auxiliares)
 - git log: mostra o histórico de commits
