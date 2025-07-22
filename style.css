@@ -1,0 +1,22 @@
+body {
+  background-color: gray;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: whitesmoke;
+  height: 250px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  place-content: center;
+  width: 100%;
+}

@@ -4,49 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title> CEP </title>
 </head>
 
 <body>
-  <form onsubmit="return consultaCep(event)" id="formulario">
-    <label for="cep"> CEP </label>
-    <input type="text" id="cep" name="cep" />
-    <input type="submit" value="Enviar" />
-  </form>
-
-  <div id="resultado">
-
+  <div class="box">
+    <form onsubmit="return consultaCep(event)" id="formulario">
+      <label for="cep"> CEP </label>
+      <input type="text" id="cep" name="cep" />
+      <input type="submit" value="Enviar" />
+    </form>
+    <div id="resultado">
+    </div>
   </div>
-
-  <script>
-    async function consultaCep(event) {
-      event.preventDefault();
-      const cep = document.getElementById("formulario").elements["cep"].value;
-      const endereco = await mostraCep(cep);
-      document.getElementById("resultado").innerText = formataEndereco(endereco);
-    }
-
-    async function mostraCep(cep) {
-      const url = "https://viacep.com.br/ws/" + cep + "/json/";
-      const resposta = await fetch(url);
-      const body = await resposta.json();
-      console.log(body);
-      return body;
-    }
-    function formataEndereco(endereco) {
-      return endereco.logradouro + ", " + endereco.bairro + ", " + endereco.localidade + " (" + endereco.uf + ")";
-
-
-
-
-
-      uf
-      :
-      "SP"
-    }
-
-  </script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
